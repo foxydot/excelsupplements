@@ -92,6 +92,11 @@ function msdlab_page_banner(){
 /*** SIDEBARS ***/
 function msdlab_add_extra_theme_sidebars(){
     genesis_register_sidebar(array(
+    'name' => 'Preheader Sidebar',
+    'description' => 'Widgets on the Preheader',
+    'id' => 'pre-header'
+            ));
+    genesis_register_sidebar(array(
     'name' => 'Blog Sidebar',
     'description' => 'Widgets on the Blog Pages',
     'id' => 'blog'
