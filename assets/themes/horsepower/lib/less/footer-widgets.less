@@ -3,61 +3,176 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-  background-color: #333;
-  color: #999;
   clear: both;
-  padding: 40px 0 16px;
-  padding: 4rem 0 1.6rem;
-}
-
-.footer-widgets-1,
-.footer-widgets-3 {
-  width: 350px;
-}
-
-.footer-widgets-2 {
-  width: 360px;
-}
-
-.footer-widgets-1 {
-  margin-right: 40px;
-  margin-right: 4rem;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-  float: left;
-}
-
-.footer-widgets-3 {
-  float: right;
-}
-
-.footer-widgets a {
-  border-bottom: 1px solid #666;
-  color: #999;
-}
-
-.footer-widgets a:hover {
-  color: #ddd;
-}
-
-.footer-widgets .widget {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
-}
-
-.footer-widgets .widget-title {
-  color: #fff;
-}
-
-.footer-widgets li {
-  list-style-type: none;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem;
-  word-wrap: break-word;
-}
-
-.footer-widgets .search-form input:focus {
-  border: 1px solid #ddd;
+  border-top: 1px solid fade(@ltgrey,50%);
+  padding: 2rem 0 57px 0;
+  a {
+    color: @orange;
+  }
+  
+  a:hover {
+    color: fade(@orange,50%);
+  }
+  input[type="submit"],input[type="button"],.button{
+    .button(@orange,@white);
+    margin: 12px 0;
+    &:hover{
+      .button-hover(@orange,@white);
+      margin: 12px 0;
+    }
+  }
+  .widget-area{
+    .wrap;
+  }
+  .widget {
+    margin: 0 auto;
+    .widget-title{
+      text-transform: none;
+      font-size: 2rem;
+    }
+  }
+    
+  li {
+    list-style-type: none;
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+  }
+  
+  .connected-text{
+  }
+  .connected-form{
+    .gform_title{
+      
+      font-size: 1.6rem;
+    }
+    input, textarea{
+      
+    }
+    label.gfield_label{
+      display: none;
+    }
+    ::-webkit-input-placeholder {
+   color: @white;
+   font-style: italic;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+       color: @white;  
+   font-style: italic;
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: @white;  
+   font-style: italic;
+    }
+    
+    :-ms-input-placeholder {  
+       color: @white;  
+   font-style: italic;
+    }
+    
+  .gform_footer{
+    margin: 0;
+    padding: 0;
+  }
+  }
+  .right{
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-top: 200px;
+    .connected-bizname{
+      display: none;
+    }
+  }
+  h3, h3.gform_title{
+  }
+  .connected-address{
+    margin-bottom: 2rem;
+    span.msdsocial_street{
+      display: block;
+    }
+  }  
+  .connected-social{
+    display: table;
+      float: none;
+      clear: both;
+      margin-bottom: 2rem;
+    .social-media{
+      float: left;
+      display: block;
+      a.fa{
+        background: @ltgrey;
+        border-radius: 100%;
+        margin: 5px;
+        height: 30px;
+        width: 30px;
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: @white;
+        &:before{
+          opacity: 1;
+        }
+      }
+      a.fa.first-child{
+        margin-left: 0;
+      }
+      a.fa.last-child{
+        margin-right: 0;
+      }
+      a.fa:hover{
+        color: @white;
+      }
+          
+       a.fa-facebook:hover{
+         background-color:@facebook;
+       }
+       a.fa-twitter:hover{
+         background-color:@twitter;
+       }
+       a.fa-pinterest:hover{
+         background-color:@pinterest;
+       }
+       a.fa-google-plus:hover{
+         background-color:@google;
+       }
+       a.fa-linkedin:hover{
+         background-color:@linkedin;
+       }
+       a.fa-instagram:hover{
+         background-color:@instagram;
+       }
+       a.fa-tumblr:hover{
+         background-color:@tumblr;
+       }
+       a.fa-reddit:hover{
+         background-color:@reddit;
+       }
+       a.fa-flickr:hover{
+         background-color:@flickr;
+       }
+       a.fa-youtube:hover{
+         background-color:@youtube;
+       }
+       a.fa-vimeo-square:hover{
+         background-color:@vimeo;
+       }
+       a.fa-vine:hover{
+         background-color:@vine;
+       }
+       a.fa-share-alt:hover{
+         background-color:@sharethis;
+       }
+       a.fa-envelope:hover{
+         background-color:@contact;
+       }
+       a.fa-rss:hover{
+         background-color:@rss;
+       }
+    }
+  }
+  .search-form input:focus {
+    border: 0 solid #ddd;
+  }
+  
 }

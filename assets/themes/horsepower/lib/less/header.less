@@ -1,3 +1,59 @@
+/* Pre Header */
+.pre-header{
+  background: @white;
+  .wrap{
+    .nav-secondary{
+      float: left;
+       .menu-secondary{
+         li{
+           a{
+             padding: 1.2rem 1.8rem;
+             color: @orange;
+             &:hover{
+               text-decoration: none;
+             }
+           }
+           &.first-child{
+             a{
+              padding-left: 0;
+             }
+           }
+           &.arrow-down-orange{
+             .arrow-down(@orange);
+             background: @orange;
+             a{
+               color: @white;
+             }
+           }
+         }
+       }
+    }
+    .header-widget-area{
+      text-align: right;
+      width: 50%;
+      float: right;
+      .widget{
+        width: auto;
+        display: inline-block;
+        color: @ltgrey;
+        .connected-phone,.connected-tollfree,.connected-email{
+          padding: 1.2rem;
+          float: left;
+          color: @orange;
+            a{
+            color: @orange;
+            &:hover{
+              color: @orange;
+            }
+          }
+        }
+        .connected-phone,.connected-tollfree{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
 /*
 Site Header
 ---------------------------------------------------------------------------------------------------- */
@@ -66,12 +122,13 @@ Site Header
 /* Logo, hide text */
 
 .header-image .site-header .wrap {
-  background: url(images/logo.png) no-repeat left;
   padding: 0;
 }
 
 .header-image .site-title a {
+  display: none;
   float: left;
+  background: url(../img/logo.png) no-repeat left;
   min-height: 164px;
   width: 100%;
 }

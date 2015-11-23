@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 /* Import Fonts
 ------------------------------------------------------------ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 /* Font Stacks */
 /* Font Stacks */
 .fontawesome {
@@ -8,16 +8,26 @@
 }
 /* Colors */
 /* Neutrals */
-/* Gradients */
 /* Buttons */
 .button:hover,
-.button:visited,
-.button a,
-.button a:hover,
-.button a:visited {
-  color: white;
+.button a:hover {
+  padding: 6px 24px;
+  font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
   text-decoration: none;
+  background-color: #FC7136;
+  border: 0;
+  background-color: rgba(252, 113, 54, 0.8);
 }
+/* Arrows */
 /* Clears */
 .do-clear {
   content: ".";
