@@ -9,6 +9,22 @@
 /* Colors */
 /* Neutrals */
 /* Buttons */
+.button {
+  padding: 6px 24px;
+  font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: #FC7136;
+  border: 0;
+}
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
@@ -35,4 +51,7 @@
   height: 0;
   clear: both;
   visibility: hidden;
+}
+.site-inner {
+  display: none;
 }

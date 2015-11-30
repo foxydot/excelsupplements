@@ -57,7 +57,7 @@ if (!class_exists('MSDTestimonialCPT')) {
 		        'labels' => $labels,
 		        'hierarchical' => false,
 		        'description' => 'Testimonial',
-		        'supports' => array( 'author' ,'genesis-cpt-archives-settings'),
+		        'supports' => array( 'title', 'author' ,'genesis-cpt-archives-settings'),
 		        'taxonomies' => array(),
 		        'public' => true,
 		        'show_ui' => true,
@@ -155,11 +155,13 @@ if (!class_exists('MSDTestimonialCPT')) {
             $ret = false;
             foreach($testimonials AS $testimonial){
                 $testimonial_info->the_meta($testimonial->ID);
+                $title = $testimonial->post_title;
                 $quote = apply_filters('the_content',$testimonial_info->get_the_value('quote'));
                 $name = $testimonial_info->get_the_value('attribution')!=''?'<span class="name">'.$testimonial_info->get_the_value('attribution').',</span> ':'';
                 $position = $testimonial_info->get_the_value('position')!=''?'<span class="position">'.$testimonial_info->get_the_value('position').',</span> ':'';
                 $company = $testimonial_info->get_the_value('company')!=''?'<span class="company">'.$testimonial_info->get_the_value('company').'</span> ':'';
                 $ret .= '<div class="col-md-'. 12/$columns .' col-sm-1 item-wrapper">
+                <div class="title"><h3>'.$title.'</h3></div>
                 <div class="quote">'.$quote.'</div>
                 <div class="attribution">'.$name.$position.$company.'</div>
                 </div>';
