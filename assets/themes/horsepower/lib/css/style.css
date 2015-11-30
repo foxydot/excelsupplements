@@ -6071,6 +6071,25 @@ Plugins
 img#wpstats {
   display: none;
 }
+/*LayerSlider*/
+.testimonial-slider-title {
+  margin: 0 auto;
+  color: #9B7255;
+  font-weight: 900;
+  font-size: 28px;
+}
+.testimonial-slider-quote {
+  left: 10% !important;
+  margin: 0 auto !important;
+  font-style: italic;
+}
+.testimonial-slider-attribution {
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: 700;
+  color: #FC7136;
+}
+/* MSD Social */
 .pre-header:before,
 .pre-header:after {
   content: " ";
@@ -6942,11 +6961,11 @@ Site Footer
   border-right: 1px solid #CCC;
 }
 .sectioned-page-wrapper .section-endorsements .section-title {
-  background: #584942;
-  padding: 0.4em;
   text-align: center;
 }
 .sectioned-page-wrapper .section-endorsements .section-title h3 {
+  background: #584942;
+  padding: 0.4em;
   color: #FFF;
 }
 .woocommerce #respond input#submit,
