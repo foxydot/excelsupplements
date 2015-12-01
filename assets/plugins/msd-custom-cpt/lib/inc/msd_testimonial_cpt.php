@@ -32,6 +32,7 @@ if (!class_exists('MSDTestimonialCPT')) {
 			
 			//Filters
 			//add_filter( 'pre_get_posts', array(&$this,'custom_query') );
+            add_shortcode('msdlab_get_quote',array(&$this,'quote_shortcode_handler'));
             add_shortcode('testimonial',array(&$this,'testimonial_shortcode_handler'));
             add_shortcode('testimonials',array(&$this,'testimonial_shortcode_handler'));
 		}
@@ -173,6 +174,42 @@ if (!class_exists('MSDTestimonialCPT')) {
             $ret = '<div class="msdlab_testimonial_gallery">'.$ret.'</div>';
             
             return $ret;
+        } 
+        function trim_quote($text, $length = 35) {
+            $raw_excerpt = $text;
+            if ( '' == $text ) {
+                $text = get_the_content('');
+            }
+                $text = strip_shortcodes( $text );
+                $text = preg_replace("/<img[^>]+\>/i", "", $text); 
+                $text = apply_filters('the_content', $text);
+                $text = str_replace(']]>', ']]&gt;', $text);
+                $text = strip_tags($text);
+                $excerpt_length = apply_filters('excerpt_length', $length);
+                $excerpt_more = '&hellip;<a href="'.get_post_type_archive_link($this->cpt).'">Read More</a>';
+                $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+                if ( count($words) > $excerpt_length ) {
+                    array_pop($words);
+                    $text = implode(' ', $words);
+                    $text = $text . $excerpt_more;
+                } else {
+                    $text = implode(' ', $words);
+                }
+        
+            return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+            //return $text;
+        }
+        function quote_shortcode_handler($atts){
+            global $post;
+            extract( shortcode_atts( array(
+                'id' => $post->ID,
+            ), $atts ) );
+            global $testimonial_info;
+            $testimonial = get_post($id);
+            $testimonial_info->the_meta($testimonial->ID);
+            $quote = $testimonial_info->get_the_value('quote');
+            //return $this->trim_quote($quote,100); //why is this only working on the first slide? so crazy.
+            return $quote;
         } 
 
         function add_metaboxes(){

@@ -1,0 +1,27 @@
+.post-type-archive-testimonial{
+  main.content{
+    .entry{
+      border-bottom: 1px solid fade(@ltbrown,50%);
+      .entry-content{
+        .quote{
+          text-align: center;
+          font-style: italic;
+          &:before{
+            content:'“';
+            font-size: 2em;
+            color: @orange;
+            float: left;
+            position: relative;
+            top: -0.3em;
+          }
+        }
+        .attribution{
+          text-align: right;
+          color: @ltbrown;
+          font-style: italic;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
