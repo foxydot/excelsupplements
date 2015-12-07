@@ -11,7 +11,7 @@ function msdlab_favicon_filter( $favicon_url ) {
     return get_stylesheet_directory_uri().'/lib/img/favicon.ico';
 }
 
-//add_action('genesis_before_content','msd_post_image');
+add_action('genesis_before_entry','msd_post_image');
 /**
  * Manipulate the featured image
  */
@@ -24,7 +24,6 @@ function msd_post_image() {
             'alt'   => $post->post_title,
             'title' => $post->post_title,
     );
-
     // This is the most important part!  Checks to see if the post has a Post Thumbnail assigned to it. You can delete the if conditional if you want and assume that there will always be a thumbnail
     if ( has_post_thumbnail() && is_page() ) {
         print '<section class="header-image">';

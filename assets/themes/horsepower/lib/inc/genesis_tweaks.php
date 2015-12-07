@@ -5,6 +5,7 @@ add_theme_support( 'html5' );//* Add HTML5 markup structure
 add_theme_support( 'genesis-responsive-viewport' );//* Add viewport meta tag for mobile browsers
 add_theme_support( 'custom-background' );//* Add support for custom background
  add_theme_support( 'woocommerce' );
+ add_theme_support( 'genesis-connect-woocommerce' );
 
 /*** HEADER ***/
 add_action('wp_head','msdlab_add_apple_touch_icons');

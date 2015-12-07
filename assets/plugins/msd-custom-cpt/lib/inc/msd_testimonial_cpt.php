@@ -158,14 +158,14 @@ if (!class_exists('MSDTestimonialCPT')) {
                 $testimonial_info->the_meta($testimonial->ID);
                 $title = $testimonial->post_title;
                 $quote = apply_filters('the_content',$testimonial_info->get_the_value('quote'));
-                $name = $testimonial_info->get_the_value('attribution')!=''?'<span class="name">'.$testimonial_info->get_the_value('attribution').',</span> ':'';
-                $position = $testimonial_info->get_the_value('position')!=''?'<span class="position">'.$testimonial_info->get_the_value('position').',</span> ':'';
+                $name = $testimonial_info->get_the_value('attribution')!=''?'<span class="name">'.$testimonial_info->get_the_value('attribution').'</span> ':'';
+                $position = $testimonial_info->get_the_value('position')!=''?'<span class="position">'.$testimonial_info->get_the_value('position').'</span> ':'';
                 $company = $testimonial_info->get_the_value('company')!=''?'<span class="company">'.$testimonial_info->get_the_value('company').'</span> ':'';
-                $ret .= '<div class="col-md-'. 12/$columns .' col-sm-1 item-wrapper">
-                <div class="title"><h3>'.$title.'</h3></div>
-                <div class="quote">'.$quote.'</div>
-                <div class="attribution">'.$name.$position.$company.'</div>
-                </div>';
+                $np = $name != '' && ($position != '' || $company != '')?', ':'';
+                $pc = $position != '' && $company != ''?', ':'';
+                $ret .= '<div class="title"><h3>'.$title.'</h3></div>';
+                $ret .= '<div class="quote">'.$quote.'</div>
+                <div class="attribution">&mdash;'.$name.$np.$position.$pc.$company.'</div>';
             }
             if($link){
                 $link_text = is_string($link)?$link:'Read More Testimonials';
