@@ -37,11 +37,11 @@ function woo_remove_product_tabs( $tabs ) {
 }
 add_filter('loop_shop_columns','msdlab_change_cols');
 function msdlab_change_cols($data){
-    global $template;
-    $template_file_name      = basename( $template );
-    if($template_file_name == 'archive-product.php'){
+    //global $template;
+    //$template_file_name      = basename( $template );
+    //if($template_file_name == 'archive-product.php'){
         return 2;
-    }
+    //}
     return $data;
 }
 
