@@ -19,8 +19,8 @@ if(!function_exists('ts_var')){
     }
 }
 
-//add_action('genesis_footer','msdlab_trace_actions');
+add_action('genesis_footer','msdlab_trace_actions');
 function msdlab_trace_actions(){
     global $wp_filter;
-    ts_var( $wp_filter['woocommerce_before_subcategory_title'] );
+    ts_var( $wp_filter['woocommerce_single_product_summary'] );
 }
