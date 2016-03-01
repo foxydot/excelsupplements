@@ -1,6 +1,6 @@
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300,700|Libre+Baskerville:400,400italic,700);
 /* Font Stacks */
 /* Font Stacks */
 .fontawesome {
@@ -11,7 +11,7 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -22,13 +22,13 @@
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: #AB2839;
+  background-color: #eaa523;
   border: 0;
 }
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -39,9 +39,9 @@
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: #AB2839;
+  background-color: #eaa523;
   border: 0;
-  background-color: rgba(171, 40, 57, 0.8);
+  background-color: rgba(234, 165, 35, 0.8);
 }
 /* Arrows */
 /* Clears */
@@ -54,4 +54,7 @@
 }
 .site-inner {
   display: none;
+}
+.sectioned-page-wrapper {
+  margin-top: 20px;
 }

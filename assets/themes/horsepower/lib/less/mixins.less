@@ -2,12 +2,12 @@
 /* Import Fonts
 ------------------------------------------------------------ */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300,700|Libre+Baskerville:400,400italic,700);
 
 /* Font Stacks */
 /* Font Stacks */
 .customsansserif(@size:1.6) {
-  font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
   font-size: unit((@size*10),px);
   font-size: unit(@size,rem);
@@ -15,9 +15,8 @@
 .customsanserif(@size:1.6){
   .customsansserif(@size);
 }
-
-.arial(@size:1.6) {
-  font-family: "Trebucet MS","Helvetica Neue", Arial, Helvetica, sans-serif;
+.customserif(@size:1.6) {
+  font-family: 'Libre Baskerville', 'Times New Roman', serif;
   font-weight: 400;
   font-size: unit((@size*10),px);
   font-size: unit(@size,rem);
@@ -30,7 +29,7 @@
 
 /* Colors */
 @red: #f00;
-@orange: #AB2839; //actually more of a burgandy
+@orange: #eaa523; //actually more of a burgandy...oh no... a gold.
 @yellow: #ff0;
 @green: #0f0;
 @blue: #00f;

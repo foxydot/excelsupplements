@@ -1,14 +1,15 @@
 /* Pre Header */
 .pre-header{
   background: @white;
-  .wrap{
+  width: auto;
+  float: right;
     .nav-secondary{
-      float: left;
+      display: inline-block;
        .menu-secondary{
          li{
            a{
              padding: 1.2rem 1.8rem;
-             color: @orange;
+             color: @dkgrey;
              &:hover{
                text-decoration: none;
              }
@@ -22,15 +23,14 @@
              .arrow-down(@orange);
              background: @orange;
              a{
-               color: @white;
+               color: @dkgrey;
+               font-weight: 700;
              }
            }
          }
        }
     }
     .header-widget-area{
-      text-align: right;
-      width: 50%;
       float: right;
       .widget{
         width: auto;
@@ -39,20 +39,19 @@
         .connected-phone,.connected-tollfree,.connected-email{
           padding: 1.2rem;
           float: left;
-          color: @orange;
+          color: @dkgrey;
             a{
-            color: @orange;
+            color: @dkgrey;
             &:hover{
-              color: @orange;
+              color: @medgrey;
             }
           }
         }
         .connected-phone,.connected-tollfree{
-          font-weight: 700;
+          font-weight: 400;
         }
       }
     }
-  }
 }
 /*
 Site Header
@@ -60,28 +59,25 @@ Site Header
 
 .site-header {
   background-color: @white;
-  max-height: 116px;
 }
 
 .site-header .wrap {
-  padding: 40px 0;
-  padding: 4rem 0;
+  padding: 0;
 }
 
 /* Title Area
 --------------------------------------------- */
 
 .title-area {
-  float: left;
   font-family: Lato, sans-serif;
   font-weight: 700;
   padding: 16px 0;
   padding: 1.6rem 0;
-  width: 320px;
+  display: block;
 }
 
 .header-image .title-area {
-  padding: 0;
+  padding: 20px 0 0 0;
 }
 
 .site-title {
@@ -116,36 +112,41 @@ Site Header
 
 .header-image .site-description,
 .header-image .site-title a {
-  display: block;
-  text-indent: -9999px;
+  display: inline-block;
+  width: 50%;
+  .customserif(2.4);
+  color: @orange;
+  font-style: italic;
 }
 
 /* Logo, hide text */
 
-.header-image .site-header .wrap {
-  padding: 0;
+.header-image .site-header{
+  padding-bottom: 20px;
+   .wrap {
+    padding: 0;
+    }
 }
 
 .header-image .site-title a {
-  display: none;
+  text-indent: -9999px;
+  display: inline-block;
   float: left;
   background: url(../img/logo.png) no-repeat left;
-  min-height: 164px;
-  width: 100%;
+  background-size: contain;
+  min-height: 100px;
+  width: 25%;
 }
 
 /* Widget Area
 --------------------------------------------- */
 
 .site-header .widget-area {
-  float: right;
-  text-align: right;
-  width: 800px;
+  display: inline-block;
 }
 
 .header-image .site-header .widget-area {
-  padding: 40px 0;
-  padding: 4rem 0;
+  padding: 0;
 }
 
 .site-header .search-form {

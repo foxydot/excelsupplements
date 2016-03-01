@@ -11,8 +11,14 @@ add_theme_support( 'custom-background' );//* Add support for custom background
 add_action('wp_head','msdlab_add_apple_touch_icons');
 add_filter( 'genesis_search_text', 'msdlab_search_text' ); //customizes the serach bar placeholder
 add_filter('genesis_search_button_text', 'msdlab_search_button'); //customize the search form to add fontawesome search button.
-add_action('genesis_before_header','msdlab_pre_header');
+add_action('genesis_header','msdlab_pre_header', 6);
 
+/** Remove Edit Link */
+add_filter( 'edit_post_link', '__return_false' );
+
+if(is_front_page){
+    remove_all_actions('genesis_entry_header');
+}
 /**
  * Move secodary nav into pre-header
  */
@@ -27,8 +33,8 @@ add_action('msdlab_pre_header','msdlab_header_right');
 /**
  * Move nav into header
  */
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'genesis_do_nav' );
+//remove_action( 'genesis_after_header', 'genesis_do_nav' );
+//add_action( 'genesis_header', 'genesis_do_nav' );
 
 /*** SIDEBARS ***/
 add_action('genesis_before', 'msdlab_ro_layout_logic'); //This ensures that the primary sidebar is always to the left.

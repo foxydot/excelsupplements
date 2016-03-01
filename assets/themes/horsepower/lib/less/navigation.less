@@ -123,48 +123,30 @@ Site Navigation
 --------------------------------------------- */
 
 .nav-primary {
-  position: relative;
-  top: -30px;
   li{
-    background: @ltbrown;
-    border-right: 1px white solid;
+    background: @orange;
+    border-right: 3px white solid;
     width: 20%;
-    margin-top: 75px;
     a{
-      color :@white;
+      color :@dkgrey;
       padding: 0.4rem;
       text-align: center;
-    }
-    &.logo{
-      background-color: transparent;
-      margin-top: 0;
-      a{
-        background: url(../img/logo.png) no-repeat center bottom;
-        background-size: contain;
-        display: block;
-        height: 80px;
-        span{
-          display: none;
-        }
-      }
     }
   }
 }
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
-  color: @orange;
+  color: @medgrey;
   text-decoration: none;
 }
 
 .nav-primary .sub-menu a:hover {
-  color: @orange;
+  color: @medgrey;
 }
 
 /* Secondary Navigation
 --------------------------------------------- */
 
 .nav-secondary {
-  background-color: #fff;
-  width: 50%;
 }
