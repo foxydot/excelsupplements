@@ -5683,9 +5683,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 100;
   color: #333;
-  font-family: Lato, sans-serif;
-  font-weight: 700;
   line-height: 1.2;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
@@ -7170,6 +7173,40 @@ Site Footer
   font-weight: 700;
   color: #eaa523;
   text-align: right;
+}
+.section-content .latest-post-selection article {
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+.section-content .latest-post-selection article h1 {
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.section-content .latest-post-selection article .read-more {
+  padding: 6px 24px;
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: #eaa523;
+  border: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 /*
 Media Queries
