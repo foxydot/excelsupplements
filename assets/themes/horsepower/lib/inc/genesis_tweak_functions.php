@@ -74,6 +74,7 @@ function msdlab_page_banner(){
         return;
     global $post;
     if(is_page()) {
+        ts_data('HI THERE!');
         $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'page_banner' );
         $background = $featured_image[0];
         remove_action('genesis_entry_header', 'genesis_do_post_title');

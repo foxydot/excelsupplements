@@ -16,7 +16,7 @@ add_action('genesis_header','msdlab_pre_header', 6);
 /** Remove Edit Link */
 add_filter( 'edit_post_link', '__return_false' );
 
-if(is_front_page){
+if(is_front_page()){
     remove_all_actions('genesis_entry_header');
 }
 /**
