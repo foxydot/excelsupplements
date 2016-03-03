@@ -15,8 +15,12 @@ function msdlab_get_excerpt( $post_id, $excerpt_length = 50, $trailing_character
      
     if( count( $words ) > $excerpt_length )
         $words = array_slice( $words, 0, $excerpt_length );
-     
-    $the_excerpt = implode( ' ', $words ) . '<a href="'.get_permalink($post_id).'">'.$trailing_character.'</a>';
+    
+    $the_excerpt = implode( ' ', $words );
+    
+    if($trailing_character){ 
+       $the_excerpt .= '<a href="'.get_permalink($post_id).'">'.$trailing_character.'</a>';
+    }
     return $the_excerpt;
 }
 

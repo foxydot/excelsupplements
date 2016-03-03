@@ -63,3 +63,36 @@ function msdlab_mailto_function($atts, $content){
 add_shortcode('columns','column_shortcode');
 
 add_shortcode('sitemap','msdlab_sitemap');
+
+add_shortcode('page-widget','msdlab_page_widget');
+function msdlab_page_widget($atts){
+    extract( shortcode_atts( array(
+        'slug' => false,
+        'id' => false
+    ), $atts ) );
+    if(!$slug && !$id){
+        return;
+    }
+    $args=array(
+        'post_type'      => 'page',
+        'post_status'    => 'publish',
+        'posts_per_page' => 1
+    );
+    if($slug){
+        $args['name'] = $slug;
+    } elseif($id){
+        $args['id'] = $id;
+    }
+    $posts = get_posts($args);
+    $post = $posts[0];
+    $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'page_banner' );
+    $background = $featured_image[0];
+    $background_style = strlen($background)>0?' style = "background-image:url('.$background.')"':'';
+    $ret = '<div class="page-widget-background"'.$background_style.'>
+        <div class="page-widget-info">
+            <a class="entry-title" href="'.get_the_permalink($post->ID).'">'.$post->post_title.'</a>
+            <a class="entry-content" href="'.get_the_permalink($post->ID).'">'.msdlab_get_excerpt($post->ID,50,false).'</a>
+        </div>
+    </div>';
+    return $ret;
+}

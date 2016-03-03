@@ -6470,11 +6470,11 @@ Site Navigation
 }
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
-  color: #999;
+  color: #000;
   text-decoration: none;
 }
 .nav-primary .sub-menu a:hover {
-  color: #999;
+  color: #000;
 }
 /* Secondary Navigation
 --------------------------------------------- */

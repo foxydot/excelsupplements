@@ -4,4 +4,52 @@
 .site-inner{
   display: none;
 }
-.sectioned-page-wrapper{margin-top:20px;}
+.sectioned-page-wrapper{
+  margin-top:20px;
+  .section-hero-and-three-columns{
+    .section-content{
+      padding-top: 15px;
+      .page-widget-background{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 184px;
+        overflow: hidden;
+        position: relative;
+        .page-widget-info{
+          background-color: fade(@orange,80%);
+          padding: 15px;
+          text-shadow: 0 0 6px fade(@dkgrey,60%);
+          position: absolute;
+          top: 130px;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition:    all 0.5s ease-in-out;
+          -ms-transition:     all 0.5s ease-in-out;
+          -o-transition:      all 0.5s ease-in-out;
+          transition:         all 0.5s ease-in-out;
+          a:link, a:visited{
+            color: @white;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+          a.entry-title{
+            font-size: 2.4rem;
+            margin-bottom: 0.8em;
+            display: block;
+          }
+          a.entry-content{
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 100;
+          }
+        }
+        &:hover{
+          .page-widget-info{
+            top: 0;
+          }
+        }
+      }
+    }
+  }  
+}
