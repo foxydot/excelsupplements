@@ -4,7 +4,7 @@
  */
 add_image_size('tiny-thumb', 50, 50, TRUE);
 add_image_size('post-thumb', 225, 160, TRUE);
-add_image_size( 'post-image', 540, 150, TRUE ); //image to float at the top of the post. Reversed Out does these a lot.
+add_image_size( 'post-image', 540, 320, TRUE ); //image to float at the top of the post. Reversed Out does these a lot.
 
 /* Display a custom favicon */
 add_filter( 'genesis_pre_load_favicon', 'msdlab_favicon_filter' );
@@ -21,7 +21,7 @@ function msd_post_image() {
     //setup thumbnail image args to be used with genesis_get_image();
     $size = 'post-image'; // Change this to whatever add_image_size you want
     $default_attr = array(
-            'class' => "alignright attachment-$size $size",
+            'class' => "alignleft attachment-$size $size",
             'alt'   => $post->post_title,
             'title' => $post->post_title,
     );
