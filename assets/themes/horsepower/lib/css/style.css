@@ -7013,6 +7013,10 @@ Site Footer
   padding-top: 0;
   text-transform: uppercase;
 }
+.woocommerce ul.products li.product .button {
+  margin-left: 0;
+  margin-right: 0;
+}
 .sectioned-page-wrapper .woocommerce ul.products li.product,
 .page-template-default .woocommerce ul.products li.product {
   width: 100%;
