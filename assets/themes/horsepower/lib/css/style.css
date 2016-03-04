@@ -6293,6 +6293,10 @@ img#wpstats {
 .pre-header .header-widget-area .widget .connected-tollfree {
   font-weight: 400;
 }
+.pre-header .header-widget-area .widget_text a {
+  display: block;
+  padding: 0.8em 0 0.8em 0.8em;
+}
 /*
 Site Header
 ---------------------------------------------------------------------------------------------------- */
