@@ -12,7 +12,7 @@ function msdlab_favicon_filter( $favicon_url ) {
     return get_stylesheet_directory_uri().'/lib/img/favicon.ico';
 }
 
-add_action('genesis_before_entry','msd_post_image');
+add_action('genesis_entry_content','msd_post_image',5);
 /**
  * Manipulate the featured image
  */

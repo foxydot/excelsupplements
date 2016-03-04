@@ -5937,6 +5937,7 @@ img.alignright,
 .breadcrumb {
   margin-bottom: 20px;
   margin-bottom: 2rem;
+  background: transparent;
 }
 .author-box {
   background-color: #fff;
@@ -6214,6 +6215,7 @@ img#wpstats {
   color: #666;
 }
 .pre-header .nav-secondary .menu-secondary li a:hover {
+  color: #eaa523;
   text-decoration: none;
 }
 .pre-header .nav-secondary .menu-secondary li.first-child a {
@@ -6233,13 +6235,34 @@ img#wpstats {
   pointer-events: none;
   border-color: rgba(234, 165, 35, 0);
   border-top-color: #eaa523;
-  border-width: 20px 40px;
-  margin-left: -40px;
+  border-width: 20px 36px;
+  margin-left: -36px;
   z-index: 300;
 }
 .pre-header .nav-secondary .menu-secondary li.arrow-down-orange a {
   color: #666;
   font-weight: 700;
+}
+.pre-header .nav-secondary .menu-secondary li.arrow-down-orange:hover {
+  position: relative;
+  background: #CCC;
+}
+.pre-header .nav-secondary .menu-secondary li.arrow-down-orange:hover:after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(204, 204, 204, 0);
+  border-top-color: #CCC;
+  border-width: 20px 36px;
+  margin-left: -36px;
+  z-index: 300;
+}
+.pre-header .nav-secondary .menu-secondary li.arrow-down-orange:hover a {
+  color: #666;
 }
 .pre-header .header-widget-area {
   float: right;
@@ -6468,8 +6491,12 @@ Site Navigation
   padding: 0.4rem;
   text-align: center;
 }
-.nav-primary a:hover,
-.nav-primary .current-menu-item > a {
+.nav-primary li:hover,
+.nav-primary li.current-menu-item {
+  background: #CCC;
+}
+.nav-primary li:hover a,
+.nav-primary li.current-menu-item a {
   color: #000;
   text-decoration: none;
 }
@@ -6555,7 +6582,7 @@ Content Area
   display: inline;
 }
 .archive-pagination li a {
-  background-color: #333;
+  background-color: #999;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -6565,10 +6592,10 @@ Content Area
 }
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-  background-color: #f15123;
+  background-color: #eaa523;
 }
 .entry-pagination a {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #999;
 }
 /* Comments
 --------------------------------------------- */

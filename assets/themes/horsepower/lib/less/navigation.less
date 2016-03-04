@@ -132,13 +132,14 @@ Site Navigation
       padding: 0.4rem;
       text-align: center;
     }
+    &:hover, &.current-menu-item{
+      background: @ltgrey;
+      a {
+        color: @black;
+        text-decoration: none;
+      }
+    }
   }
-}
-
-.nav-primary a:hover,
-.nav-primary .current-menu-item > a {
-  color: @black;
-  text-decoration: none;
 }
 
 .nav-primary .sub-menu a:hover {
