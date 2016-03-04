@@ -7077,10 +7077,16 @@ Site Footer
   transition: all 0.1s ease-in-out;
   border-radius: 0;
 }
+.woocommerce div.product form.cart .variations td.label,
+.woocommerce div.product form.cart .variations td.value {
+  display: block;
+  text-align: left;
+}
 .woocommerce div.product form.cart .variations label {
   color: #666;
   font-weight: 300;
-  margin: 1.5em 0;
+  margin: 0;
+  font-size: 1.5em;
 }
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
@@ -7162,6 +7168,92 @@ Site Footer
 }
 .woocommerce #reviews #comments #reviews-carousel .carousel-control:focus {
   outline: none;
+}
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt[disabled]:disabled,
+.woocommerce #respond input#submit.alt[disabled]:disabled:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt[disabled]:disabled,
+.woocommerce a.button.alt[disabled]:disabled:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt[disabled]:disabled,
+.woocommerce button.button.alt[disabled]:disabled:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt[disabled]:disabled,
+.woocommerce input.button.alt[disabled]:disabled:hover {
+  padding: 6px 24px;
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: #eaa523;
+  border: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  opacity: 1;
+}
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt.disabled:hover:hover,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled:hover:hover,
+.woocommerce #respond input#submit.alt[disabled]:disabled:hover,
+.woocommerce #respond input#submit.alt[disabled]:disabled:hover:hover,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt.disabled:hover:hover,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled:hover:hover,
+.woocommerce a.button.alt[disabled]:disabled:hover,
+.woocommerce a.button.alt[disabled]:disabled:hover:hover,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt.disabled:hover:hover,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled:hover:hover,
+.woocommerce button.button.alt[disabled]:disabled:hover,
+.woocommerce button.button.alt[disabled]:disabled:hover:hover,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt.disabled:hover:hover,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled:hover:hover,
+.woocommerce input.button.alt[disabled]:disabled:hover,
+.woocommerce input.button.alt[disabled]:disabled:hover:hover {
+  padding: 6px 24px;
+  font-family: "Oswald", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: #CCC;
+  border: 0;
+  background-color: rgba(204, 204, 204, 0.8);
+  color: #666;
 }
 .post-type-archive-testimonial main.content .entry {
   border-bottom: 1px solid rgba(155, 114, 85, 0.5);

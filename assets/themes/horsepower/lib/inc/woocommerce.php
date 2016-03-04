@@ -29,8 +29,8 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 function woo_remove_product_tabs( $tabs ) {
 
     unset( $tabs['description'] );          // Remove the description tab
-    unset( $tabs['reviews'] );          // Remove the reviews tab
-    unset( $tabs['additional_information'] );   // Remove the additional information tab
+    //unset( $tabs['reviews'] );          // Remove the reviews tab
+    //unset( $tabs['additional_information'] );   // Remove the additional information tab
 
     return $tabs;
 
@@ -93,3 +93,32 @@ function msdlab_change_text($text){
     }
     return $text;
 }
+
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta',40);
+remove_action('woocommerce_after_single_product_summary','woocommerce_upsell_display',15);
+remove_action('woocommerce_after_single_product_summary','woocommerce_output_related_products',20);
+/**
+ * Use WC 2.0 variable price format, now include sale price strikeout
+ *
+ * @param  string $price
+ * @param  object $product
+ * @return string
+ */
+function wc_wc20_variation_price_format( $price, $product ) {
+    // Main Price
+    $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+    $price = $prices[0] !== $prices[1] ? sprintf( __( 'Starting at: %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+
+    // Sale Price
+    $prices = array( $product->get_variation_regular_price( 'min', true ), $product->get_variation_regular_price( 'max', true ) );
+    sort( $prices );
+    $saleprice = $prices[0] !== $prices[1] ? sprintf( __( 'Starting at: %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+
+    if ( $price !== $saleprice ) {
+        $price = '<del>' . $saleprice . '</del> <ins>' . $price . '</ins>';
+    }
+    
+    return $price;
+}
+add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
