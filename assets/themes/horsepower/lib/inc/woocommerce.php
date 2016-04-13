@@ -1,13 +1,29 @@
 <?php
 
-add_action('msdlab_before_product_loop','msdlab_move_product_thumbnail');
-add_action('msdlab_before_product_loop','woocommerce_template_loop_product_thumbnail');
+add_action('woocommerce_before_shop_loop_item','msdlab_product_display_changes');
 
-function msdlab_move_product_thumbnail(){
-	remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');
+function msdlab_product_display_changes(){
+    global $post;
+    $brand = false;
+    if (class_exists('MultiPostThumbnails')){
+        if((bool) MultiPostThumbnails::has_post_thumbnail('product','brand-image',$post->ID)){
+            remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');
+            add_action('woocommerce_before_shop_loop_item_title','msdlab_template_loop_product_brand_thumbnail');
+        } else {
+            add_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');            
+            remove_action('woocommerce_before_shop_loop_item_title','msdlab_template_loop_product_brand_thumbnail');
+        }
+    }
 	remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating',5);
 	remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_price');
 	add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_single_excerpt');
+}
+
+function msdlab_template_loop_product_brand_thumbnail(){
+    global $post;
+    if (class_exists('MultiPostThumbnails')){
+        MultiPostThumbnails::the_post_thumbnail('product','brand-image',$post->ID);
+    }
 }
 
 function woocommerce_template_product_description() {
@@ -122,3 +138,13 @@ function wc_wc20_variation_price_format( $price, $product ) {
 }
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'Brand Image',
+            'id' => 'brand-image',
+            'post_type' => 'product'
+        )
+    );
+}
