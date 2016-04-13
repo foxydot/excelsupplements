@@ -6425,7 +6425,7 @@ Site Navigation
   -ms-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
-  width: 200px;
+  width: 225px;
   z-index: 99;
 }
 .genesis-nav-menu .sub-menu a {
@@ -6437,7 +6437,7 @@ Site Navigation
   padding: 16px 20px;
   padding: 1.6rem 2rem;
   position: relative;
-  width: 200px;
+  width: 225px;
 }
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -54px 0 0 199px;
@@ -6503,6 +6503,9 @@ Site Navigation
 .nav-primary li.current-menu-item a {
   color: #000;
   text-decoration: none;
+}
+.nav-primary li .sub-menu li {
+  float: none;
 }
 .nav-primary .sub-menu a:hover {
   color: #000;
@@ -6974,6 +6977,63 @@ Site Footer
 .sectioned-page-wrapper .section.section-hero-and-two-columns .section-header-area {
   margin-bottom: 1em;
 }
+.sectioned-page-wrapper .section.landing .section-content {
+  padding-top: 15px;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 184px;
+  overflow: hidden;
+  position: relative;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info {
+  background-color: rgba(234, 165, 35, 0.8);
+  padding: 15px;
+  text-shadow: 0 0 6px rgba(102, 102, 102, 0.6);
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a:link,
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a:visited {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a:link:hover,
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a:visited:hover {
+  text-decoration: none;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a.entry-title {
+  font-size: 2.4rem;
+  margin-bottom: 0.8em;
+  display: block;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a.entry-content {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 100;
+  min-height: 115px;
+}
+.sectioned-page-wrapper .section.landing .section-content .page-widget-background:hover .page-widget-info {
+  top: 0;
+}
+.sectioned-page-wrapper .section.landing .section-content .woocommerce .products .product .product-image {
+  width: 33%;
+  height: auto;
+  margin-right: 20px;
+  float: left;
+}
+.sectioned-page-wrapper .section.landing .section-content .woocommerce .products .product .product-content {
+  width: 64%
+        float: left;
+  text-align: left;
+}
 .sectioned-page-wrapper .column-gradient .section-body .row {
   margin: 0;
 }
@@ -7016,9 +7076,9 @@ Site Footer
   font-weight: 500;
 }
 .woocommerce ul.products li.product .product-image {
-  width: 200px;
-  height: 200px;
-  margin-right: 20px;
+  min-width: 200px;
+  min-height: 200px;
+  margin-bottom: 20px;
 }
 .woocommerce ul.products li.product .product-content a h3 {
   padding-top: 0;

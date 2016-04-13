@@ -1,19 +1,20 @@
 <?php
 
-add_action('woocommerce_before_shop_loop_item','msdlab_product_display_changes');
+add_action('msdlab_before_product_loop','msdlab_product_display_changes');
 
 function msdlab_product_display_changes(){
     global $post;
     $brand = false;
+    remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');
+    woocommerce_template_loop_product_link_open();
     if (class_exists('MultiPostThumbnails')){
         if((bool) MultiPostThumbnails::has_post_thumbnail('product','brand-image',$post->ID)){
-            remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');
-            add_action('woocommerce_before_shop_loop_item_title','msdlab_template_loop_product_brand_thumbnail');
+            msdlab_template_loop_product_brand_thumbnail();
         } else {
-            add_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail');            
-            remove_action('woocommerce_before_shop_loop_item_title','msdlab_template_loop_product_brand_thumbnail');
+            woocommerce_template_loop_product_thumbnail();            
         }
     }
+    woocommerce_template_loop_product_link_close();
 	remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating',5);
 	remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_price');
 	add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_single_excerpt');

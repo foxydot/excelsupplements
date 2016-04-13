@@ -44,6 +44,71 @@
         margin-bottom: 1em;
       }
     }
+    &.landing{
+    .section-content{
+      padding-top: 15px;
+      .page-widget-background{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 184px;
+        overflow: hidden;
+        position: relative;
+        .page-widget-info{
+          background-color: fade(@orange,80%);
+          padding: 15px;
+          text-shadow: 0 0 6px fade(@dkgrey,60%);
+          position: absolute;
+          top: 130px;
+          width: 100%;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition:    all 0.5s ease-in-out;
+          -ms-transition:     all 0.5s ease-in-out;
+          -o-transition:      all 0.5s ease-in-out;
+          transition:         all 0.5s ease-in-out;
+          a:link, a:visited{
+            color: @white;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+          a.entry-title{
+            font-size: 2.4rem;
+            margin-bottom: 0.8em;
+            display: block;
+          }
+          a.entry-content{
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 100;
+            min-height: 115px;
+          }
+        }
+        &:hover{
+          .page-widget-info{
+            top: 0;
+          }
+        }
+      }
+      .woocommerce{
+        .products{
+          .product{
+            .product-image{
+        width: 33%;
+        height: auto;
+        margin-right: 20px;
+        float: left;
+      }
+      .product-content{
+        width: 64%
+        float: left;
+        text-align: left;
+      }
+          }
+        }
+      }
+    }
+    }
   }
   .column-gradient{
     .section-body{
