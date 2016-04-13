@@ -102,10 +102,20 @@ function msdlab_add_extra_theme_sidebars(){
     'description' => 'Widgets on the Blog Pages',
     'id' => 'blog'
             ));
+    genesis_register_sidebar(array(
+    'name' => 'Page Footer Sidebar',
+    'description' => 'Widgets Landing Pages',
+    'id' => 'page-footer'
+            ));
 }
 function msdlab_do_blog_sidebar(){
     if(is_active_sidebar('blog')){
         dynamic_sidebar('blog');
+    }
+}
+function msdlab_do_page_footer_sidebar(){
+    if(is_active_sidebar('page-footer')){
+        dynamic_sidebar('page-footer');
     }
 }
 /**

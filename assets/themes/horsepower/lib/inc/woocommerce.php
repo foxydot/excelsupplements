@@ -51,7 +51,7 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 
 }
-add_filter('loop_shop_columns','msdlab_change_cols');
+//add_filter('loop_shop_columns','msdlab_change_cols');
 function msdlab_change_cols($data){
     //global $template;
     //$template_file_name      = basename( $template );
@@ -147,4 +147,62 @@ if (class_exists('MultiPostThumbnails')) {
             'post_type' => 'product'
         )
     );
+}
+
+add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+
+function custom_pre_get_posts_query( $q ) {
+
+    if ( ! $q->is_main_query() ) return;
+    if ( ! $q->is_post_type_archive() ) return;
+    
+    if ( ! is_admin() && is_shop() ) {
+
+        $q->set( 'tax_query', array(array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => array( 'supplements' ), // Don't display products in the knives category on the shop page
+            'operator' => 'IN'
+        )));
+    
+    }
+
+    remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+
+}
+
+add_filter( 'get_terms', 'get_subcategory_terms', 10, 3 );
+ 
+function get_subcategory_terms( $terms, $taxonomies, $args ) {
+ 
+  $new_terms = array();
+ 
+  // if a product category and on the shop page
+  if ( in_array( 'product_cat', $taxonomies ) && ! is_admin() && is_shop() ) {
+ 
+    foreach ( $terms as $key => $term ) {
+ 
+      if ( ! in_array( $term->slug, array( 'supplements' ) ) ) {
+        $new_terms[] = $term;
+      }
+ 
+    }
+ 
+    $terms = $new_terms;
+  }
+ 
+  return $terms;
+}
+
+remove_action('woocommerce_sidebar','woocommerce_get_sidebar');
+add_action('woocommerce_sidebar','msdlab_do_page_footer_sidebar');
+
+add_action('woocommerce_after_subcategory_title','msdlab_subcategory_description');
+add_action('woocommerce_after_subcategory_title','msdlab_subcategory_link_button');
+
+function msdlab_subcategory_description($category){
+    print term_description($category->term_id,'product_cat');
+}
+function msdlab_subcategory_link_button($category){
+    print '<a class="button" href="' . get_term_link( $category->slug, 'product_cat' ) . '">Browse</a>';
 }

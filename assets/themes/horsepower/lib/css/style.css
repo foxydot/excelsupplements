@@ -6994,22 +6994,32 @@ Site Footer
   color: #FFF;
 }
 .woocommerce ul.products li.product {
-  width: 48%;
   padding: 20px;
   margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+.woocommerce ul.products li.product h3 {
+  font-size: 1.2em;
+  font-weight: 500;
 }
 .woocommerce ul.products li.product .product-image {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   margin-right: 20px;
 }
 .woocommerce ul.products li.product .product-content a h3 {
   padding-top: 0;
-  text-transform: uppercase;
 }
 .woocommerce ul.products li.product .button {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.woocommerce ul.products li.product.product-category {
+  text-align: left;
+  width: 48%;
+  border: 1px solid #CCC;
 }
 .sectioned-page-wrapper .woocommerce ul.products li.product,
 .page-template-default .woocommerce ul.products li.product {
