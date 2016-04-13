@@ -6935,6 +6935,14 @@ Site Footer
 .sectioned-page-wrapper .section {
   margin-bottom: 2rem;
 }
+.sectioned-page-wrapper .section .section-body .row .section-content ul {
+  list-style: disc outside none;
+  margin-left: 2em;
+}
+.sectioned-page-wrapper .section .section-body .row .section-content ul li {
+  list-style: disc oustide none;
+  margin-bottom: 1em;
+}
 .sectioned-page-wrapper .section .section-body .msdlab_testimonial_gallery {
   padding-bottom: 2rem;
   border-bottom: 1px solid #CCC;
@@ -6962,6 +6970,9 @@ Site Footer
   height: 0;
   clear: both;
   visibility: hidden;
+}
+.sectioned-page-wrapper .section.section-hero-and-two-columns .section-header-area {
+  margin-bottom: 1em;
 }
 .sectioned-page-wrapper .column-gradient .section-body .row {
   margin: 0;
