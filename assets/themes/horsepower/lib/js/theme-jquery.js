@@ -13,4 +13,13 @@ jQuery(document).ready(function($) {
 			return '<li class="separator">|</li>';
 		}
 	});
+	$('.page-template-page-sectioned .site-inner').css('display',function(){
+	    var content = $(this).find('.entry-content').html();
+	    if(content.length == 0){
+	        $('.sectioned-page-wrapper').css('margin-top','20px');
+	        return 'none';
+	    } else {
+	        return 'block';
+	    }
+	});
 });
