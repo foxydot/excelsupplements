@@ -7471,6 +7471,18 @@ Site Footer
 .pre-header .header-widget-area .widget .item-count.hover {
   text-decoration: none;
 }
+.section-excel-eq-landing .content-sidebar-wrap {
+  padding: 0;
+}
+.section-excel-eq-landing .content-sidebar-wrap main {
+  padding: 0;
+}
+.section-excel-eq-landing .content-sidebar-wrap main article {
+  padding: 0;
+}
+.section-excel-eq-landing .content-sidebar-wrap main article .entry-header {
+  display: none;
+}
 /*
 Media Queries
 ---------------------------------------------------------------------------------------------------- */
