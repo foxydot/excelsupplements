@@ -104,10 +104,13 @@ function woocommerce_template_loop_category_title( $category ) {
     }
     
 add_filter('woocommerce_product_add_to_cart_text','msdlab_change_text');
+add_filter('woocommerce_product_single_add_to_cart_text','msdlab_change_text');
+add_filter('woocommerce_product_add_to_cart_text','msdlab_change_text');
+
 function msdlab_change_text($text){
-    if($text == "Select options"){
+    //if($text == "Select options"){
         $text = "Buy now";
-    }
+    //}
     return $text;
 }
 
@@ -206,4 +209,14 @@ function msdlab_subcategory_description($category){
 }
 function msdlab_subcategory_link_button($category){
     print '<a class="button" href="' . get_term_link( $category->slug, 'product_cat' ) . '">Browse</a>';
+}
+
+
+add_shortcode('woocart-items','msdlab_woocart_items_handler');
+function msdlab_woocart_items_handler(){
+    return '<span class="item-count">' . WC()->cart->get_cart_contents_count() . '</span>';
+}
+add_filter( 'woocommerce_cross_sells_total', 'db_cross_sells_columns' );
+function db_cross_sells_columns( $columns ) {
+return 2;
 }
