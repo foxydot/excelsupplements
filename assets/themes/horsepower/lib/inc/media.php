@@ -18,6 +18,10 @@ add_action('genesis_entry_content','msd_post_image',5);
  */
 function msd_post_image() {
     global $post;
+    $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
+    if($template_file == 'page-sectioned.php'){
+        return false;
+    }
     //setup thumbnail image args to be used with genesis_get_image();
     $size = 'post-image'; // Change this to whatever add_image_size you want
     $default_attr = array(
