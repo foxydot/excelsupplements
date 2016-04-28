@@ -7476,21 +7476,40 @@ Site Footer
 .pre-header .header-widget-area .widget .item-count.hover {
   text-decoration: none;
 }
-.section-excel-eq-landing .content-sidebar-wrap,
-.section-why-excel .content-sidebar-wrap {
+.section-excel-eq-landing .content-sidebar-wrap {
   padding: 0;
 }
-.section-excel-eq-landing .content-sidebar-wrap main,
-.section-why-excel .content-sidebar-wrap main {
+.section-excel-eq-landing .content-sidebar-wrap main {
   padding: 0;
 }
-.section-excel-eq-landing .content-sidebar-wrap main article,
-.section-why-excel .content-sidebar-wrap main article {
+.section-excel-eq-landing .content-sidebar-wrap main article {
   padding: 0;
 }
-.section-excel-eq-landing .content-sidebar-wrap main article .entry-header,
-.section-why-excel .content-sidebar-wrap main article .entry-header {
+.section-excel-eq-landing .content-sidebar-wrap main article .entry-header {
   display: none;
+}
+#layerslider_6.ls-v5 .ls-nav-prev,
+#layerslider_6.ls-v5 .ls-nav-next {
+  font-family: FontAwesome;
+  font-weight: 300;
+  background-image: none;
+  color: rgba(234, 165, 35, 0.5);
+  font-size: 6em;
+}
+#layerslider_6.ls-v5 .ls-nav-prev,
+#layerslider_6.ls-v5 .ls-nav-next {
+  line-height: 0.5;
+}
+#layerslider_6.ls-v5 .ls-nav-prev:hover,
+#layerslider_6.ls-v5 .ls-nav-next:hover {
+  text-decoration: none;
+  color: rgba(234, 165, 35, 0.8);
+}
+#layerslider_6.ls-v5 .ls-nav-prev:after {
+  content: '\f104';
+}
+#layerslider_6.ls-v5 .ls-nav-next:before {
+  content: '\f105';
 }
 /*
 Media Queries

@@ -85,7 +85,7 @@
     }
   }
   
-.section-excel-eq-landing, .section-why-excel{
+.section-excel-eq-landing{
   .content-sidebar-wrap{
       padding: 0;
     main{
@@ -96,6 +96,33 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+#layerslider_6.ls-v5{
+  .ls-nav-prev,.ls-nav-next{
+    .fontawesome;
+    font-weight: 300;
+    background-image: none;
+    color: fade(@orange,50%);
+    font-size: 6em;
+  }
+  .ls-nav-prev,.ls-nav-next{
+    line-height: 0.5;
+    &:hover{
+      text-decoration: none;
+      color: fade(@orange,80%);
+    }
+  }
+  .ls-nav-prev{
+    &:after{
+      content: '\f104';
+    }
+  }
+  .ls-nav-next{
+    &:before{
+      content: '\f105';
     }
   }
 }
