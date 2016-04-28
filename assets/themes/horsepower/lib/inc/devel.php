@@ -22,5 +22,5 @@ if(!function_exists('ts_var')){
 //add_action('genesis_footer','msdlab_trace_actions');
 function msdlab_trace_actions(){
     global $wp_filter;
-    ts_var( $wp_filter['woocommerce_before_shop_loop_item'] );
+    ts_var( $wp_filter['woocommerce_after_subcategory_title'] );
 }

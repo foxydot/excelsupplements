@@ -106,6 +106,8 @@ function woocommerce_template_loop_category_title( $category ) {
 add_filter('woocommerce_product_add_to_cart_text','msdlab_change_text');
 add_filter('woocommerce_product_single_add_to_cart_text','msdlab_change_text');
 add_filter('woocommerce_product_add_to_cart_text','msdlab_change_text');
+add_filter('woocommerce_subcategory_link_button_text','msdlab_change_text');
+
 
 function msdlab_change_text($text){
     //if($text == "Select options"){
@@ -208,7 +210,7 @@ function msdlab_subcategory_description($category){
     print term_description($category->term_id,'product_cat');
 }
 function msdlab_subcategory_link_button($category){
-    print '<a class="button" href="' . get_term_link( $category->slug, 'product_cat' ) . '">Browse</a>';
+    print '<a class="button" href="' . get_term_link( $category->slug, 'product_cat' ) . '">' . apply_filters('woocommerce_subcategory_link_button_text','Browse') . '</a>';
 }
 
 

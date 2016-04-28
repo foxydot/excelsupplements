@@ -7018,7 +7018,7 @@ Site Footer
 }
 .sectioned-page-wrapper .section.landing .section-content .page-widget-background .page-widget-info a.entry-content {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 100;
   min-height: 115px;
 }
@@ -7101,6 +7101,10 @@ Site Footer
   max-width: 40%;
   margin-right: 2em;
   margin-bottom: 0;
+}
+.woocommerce ul.products li.product.product-category .button {
+  margin-left: 0;
+  margin-right: auto;
 }
 .sectioned-page-wrapper .woocommerce ul.products li.product,
 .page-template-default .woocommerce ul.products li.product {
@@ -7370,7 +7374,8 @@ Site Footer
   padding: 13px 24px;
   margin: 0 auto;
 }
-.section-excel-eq-landing .woocommerce ul.products li.product a.button {
+.section-excel-eq-landing .woocommerce ul.products li.product a.button,
+.section-why-excel .woocommerce ul.products li.product a.button {
   margin-left: 0;
   margin-right: auto;
 }
@@ -7471,16 +7476,20 @@ Site Footer
 .pre-header .header-widget-area .widget .item-count.hover {
   text-decoration: none;
 }
-.section-excel-eq-landing .content-sidebar-wrap {
+.section-excel-eq-landing .content-sidebar-wrap,
+.section-why-excel .content-sidebar-wrap {
   padding: 0;
 }
-.section-excel-eq-landing .content-sidebar-wrap main {
+.section-excel-eq-landing .content-sidebar-wrap main,
+.section-why-excel .content-sidebar-wrap main {
   padding: 0;
 }
-.section-excel-eq-landing .content-sidebar-wrap main article {
+.section-excel-eq-landing .content-sidebar-wrap main article,
+.section-why-excel .content-sidebar-wrap main article {
   padding: 0;
 }
-.section-excel-eq-landing .content-sidebar-wrap main article .entry-header {
+.section-excel-eq-landing .content-sidebar-wrap main article .entry-header,
+.section-why-excel .content-sidebar-wrap main article .entry-header {
   display: none;
 }
 /*
