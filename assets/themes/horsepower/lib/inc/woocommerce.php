@@ -37,6 +37,7 @@ function msdlab_remove_description_header($content){
     return false;
 }
 add_filter('woocommerce_product_description_heading','msdlab_remove_description_header');
+    remove_action('woocommerce_single_product_summary','woocommerce_template_single_rating',10);
 
 remove_action('woocommerce_single_product_summary','woocommerce_template_single_price',10);
 add_action('woocommerce_single_product_summary','woocommerce_template_single_price',20);
@@ -218,7 +219,10 @@ add_shortcode('woocart-items','msdlab_woocart_items_handler');
 function msdlab_woocart_items_handler(){
     return '<span class="item-count">' . WC()->cart->get_cart_contents_count() . '</span>';
 }
+remove_action('woocommerce_cart_collaterals','woocommerce_cross_sell_display');
+add_action('woocommerce_after_cart','woocommerce_cross_sell_display');
 add_filter( 'woocommerce_cross_sells_total', 'db_cross_sells_columns' );
+add_filter('woocommerce_cross_sells_columns','db_cross_sells_columns');
 function db_cross_sells_columns( $columns ) {
-return 2;
+return 4;
 }

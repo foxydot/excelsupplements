@@ -7272,7 +7272,7 @@ Site Footer
 }
 .woocommerce .cross-sells ul.products li.product {
   float: left;
-  width: 100%;
+  width: 50%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -7281,7 +7281,7 @@ Site Footer
 @media (min-width: 768px) {
   .woocommerce .cross-sells ul.products li.product {
     float: left;
-    width: 50%;
+    width: 25%;
   }
 }
 .woocommerce #respond input#submit.alt.disabled,
@@ -7510,6 +7510,9 @@ Site Footer
 }
 #layerslider_6.ls-v5 .ls-nav-next:before {
   content: '\f105';
+}
+.a2a_kit {
+  float: right;
 }
 /*
 Media Queries

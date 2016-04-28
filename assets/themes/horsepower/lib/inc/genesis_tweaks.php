@@ -69,3 +69,16 @@ add_action('after_404','msdlab_sitemap');
 /*** Blog Header ***/
 //add_action('genesis_before_loop','msd_add_blog_header');
 add_action('wp_head', 'msdlab_custom_hooks_management');
+
+//add social buttons neatly next to metadata
+add_filter('genesis_post_info','msdlab_social_sharing_placement');
+function msdlab_social_sharing_placement($content){
+    if(is_single() && is_cpt('post')){
+        if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) {
+            ob_start();
+            ADDTOANY_SHARE_SAVE_KIT();
+            $content = ob_get_clean() . $content;
+        }
+    }
+    return $content;
+}
