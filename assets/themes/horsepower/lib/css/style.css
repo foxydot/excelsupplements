@@ -7396,6 +7396,10 @@ Site Footer
   margin-left: 0;
   margin-right: auto;
 }
+.pp_woocommerce .ppt,
+.pp_woocommerce .pp_gallery {
+  display: none !important;
+}
 .post-type-archive-testimonial main.content .entry {
   border-bottom: 1px solid rgba(155, 114, 85, 0.5);
 }
