@@ -7535,8 +7535,8 @@ Site Footer
 .a2a_kit {
   float: right;
 }
-.100-satisfaction-guarantee .breadcrumb,
-.privacy-policy .breadcrumb {
+.section-100-satisfaction-guarantee .breadcrumb,
+.section-privacy-policy .breadcrumb {
   display: none !important;
 }
 /*
