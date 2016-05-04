@@ -7535,6 +7535,10 @@ Site Footer
 .a2a_kit {
   float: right;
 }
+.100-satisfaction-guarantee .breadcrumb,
+.privacy-policy .breadcrumb {
+  display: none !important;
+}
 /*
 Media Queries
 ---------------------------------------------------------------------------------------------------- */
