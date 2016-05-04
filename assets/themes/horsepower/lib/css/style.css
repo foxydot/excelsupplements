@@ -6508,6 +6508,13 @@ Site Navigation
 }
 .nav-primary li .sub-menu li {
   float: none;
+  background-color: #FFF;
+}
+.nav-primary li .sub-menu li:hover a,
+.nav-primary li .sub-menu li.current-menu-item a {
+  color: #000;
+  text-decoration: none;
+  background: #F6F6F6;
 }
 .nav-primary .sub-menu a:hover {
   color: #000;
