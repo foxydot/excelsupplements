@@ -6516,6 +6516,16 @@ Site Navigation
   text-decoration: none;
   background: #F6F6F6;
 }
+.nav-primary li .sub-menu li:hover .sub-menu .li a,
+.nav-primary li .sub-menu li.current-menu-item .sub-menu .li a {
+  background: #FFF;
+}
+.nav-primary li .sub-menu li:hover .sub-menu .li:hover a,
+.nav-primary li .sub-menu li.current-menu-item .sub-menu .li:hover a,
+.nav-primary li .sub-menu li:hover .sub-menu .li.current-menu-item a,
+.nav-primary li .sub-menu li.current-menu-item .sub-menu .li.current-menu-item a {
+  background: #F6F6F6;
+}
 .nav-primary .sub-menu a:hover {
   color: #000;
 }

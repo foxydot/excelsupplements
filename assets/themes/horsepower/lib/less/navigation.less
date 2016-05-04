@@ -149,6 +149,18 @@ Site Navigation
             text-decoration: none;
             background: @offwhite;
           }
+          .sub-menu{
+            .li{
+              a {
+                background:@white;
+              }
+              &:hover, &.current-menu-item{
+                a {
+                  background: @offwhite;
+                }
+              }
+            }
+          }
         }
       }
     }
