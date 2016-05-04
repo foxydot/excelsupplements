@@ -7123,6 +7123,18 @@ Site Footer
   margin-left: 0;
   margin-right: auto;
 }
+.woocommerce .woocommerce-variation-price .price .amount {
+  margin: auto 1em;
+}
+.woocommerce div.product form.cart,
+.woocommerce div.product p.cart {
+  border-top: 1px solid #CCC;
+  padding-top: 1em;
+  margin-top: 1em;
+}
+.woocommerce table.variations tbody {
+  border: none;
+}
 .sectioned-page-wrapper .woocommerce ul.products li.product,
 .page-template-default .woocommerce ul.products li.product {
   width: 100%;

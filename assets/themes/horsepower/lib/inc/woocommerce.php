@@ -226,3 +226,6 @@ add_filter('woocommerce_cross_sells_columns','db_cross_sells_columns');
 function db_cross_sells_columns( $columns ) {
 return 4;
 }
+
+remove_action('woocommerce_single_variation','woocommerce_single_variation',10);
+add_action('woocommerce_single_variation','woocommerce_single_variation',50);
