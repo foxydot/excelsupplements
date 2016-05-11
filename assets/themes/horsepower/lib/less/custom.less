@@ -134,3 +134,21 @@
     display: none !important; //I've totally sold my soul.
   }
 }
+article{
+  &.odd{
+    .entry-header{
+      .post-image{
+        float: left;
+        margin: 0 2em 2em 0;
+      }
+    }
+  }
+  &.even{
+    .entry-header{
+      .post-image{
+        float: right;
+        margin: 0 0 2em 2em;
+      }
+    }
+  }
+}

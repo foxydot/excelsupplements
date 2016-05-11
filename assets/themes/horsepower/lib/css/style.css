@@ -6542,6 +6542,10 @@ Content Area
   padding: 10px 0 20px;
   padding: 1rem 0 2rem;
 }
+.entry.post {
+  clear: both;
+  float: none;
+}
 .entry-content ol,
 .entry-content p,
 .entry-content ul,
@@ -7554,6 +7558,14 @@ Site Footer
 .section-100-satisfaction-guarantee .breadcrumb,
 .section-privacy-policy .breadcrumb {
   display: none !important;
+}
+article.odd .entry-header .post-image {
+  float: left;
+  margin: 0 2em 2em 0;
+}
+article.even .entry-header .post-image {
+  float: right;
+  margin: 0 0 2em 2em;
 }
 /*
 Media Queries
