@@ -14,7 +14,7 @@ function msdlab_display_testimonial(){
     $company = $testimonial_info->get_the_value('company')!=''?'<span class="company">'.$testimonial_info->get_the_value('company').'</span> ':'';
     $np = $name != '' && ($position != '' || $company != '')?', ':'';
     $pc = $position != '' && $company != ''?', ':'';
-    //$ret .= '<div class="title"><h3>'.$title.'</h3></div>';
+    $ret .= '<div class="title"><h3>'.$title.'</h3></div>';
     $ret .= '<div class="quote">'.$quote.'</div>
     <div class="attribution">&mdash;'.$name.$np.$position.$pc.$company.'</div>';
     print $ret;      
