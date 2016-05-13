@@ -7139,6 +7139,9 @@ Site Footer
 .woocommerce table.variations tbody {
   border: none;
 }
+.woocommerce .star-rating {
+  color: #eaa523;
+}
 .sectioned-page-wrapper .woocommerce ul.products li.product,
 .page-template-default .woocommerce ul.products li.product {
   width: 100%;
@@ -7278,6 +7281,15 @@ Site Footer
 }
 .woocommerce #reviews #comments #reviews-carousel .carousel-control:focus {
   outline: none;
+}
+.woocommerce #reviews #comments ol.commentlist li {
+  list-style-type: none;
+}
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+  display: none;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+  margin: 0;
 }
 .woocommerce .cross-sells ul.products {
   margin-left: -15px;

@@ -56,6 +56,9 @@
   table.variations tbody{
     border: none;
   }
+  .star-rating{
+    color: @orange;
+  }
 }
 
 .sectioned-page-wrapper,.page-template-default{
@@ -166,6 +169,17 @@
         top: 40%;
         &:focus{
           outline: none;
+        }
+      }
+    }
+    ol.commentlist{
+      li{
+        list-style-type: none;
+        img.avatar{
+          display: none;
+        }
+        .comment-text{
+          margin: 0;
         }
       }
     }
