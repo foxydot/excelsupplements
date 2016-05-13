@@ -49,7 +49,8 @@ add_action('genesis_before_content_sidebar_wrap', 'genesis_do_breadcrumbs'); //t
 remove_action('genesis_entry_content','genesis_do_post_image', 8);
 add_action('genesis_entry_header','genesis_do_post_image', 8);
 
-
+add_filter( 'excerpt_more', 'msdlab_read_more_link' );
+add_filter( 'the_content_more_link', 'msdlab_read_more_link' );
 //remove_action( 'genesis_entry_header', 'genesis_post_info' ); //remove the info (date, posted by,etc.)
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' ); //remove the meta (filed under, tags, etc.)
 

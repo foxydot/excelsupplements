@@ -153,6 +153,9 @@ function msdlab_newer_link_text() {
         $newerlink = '&laquo; Newer Posts';
         return $newerlink;
 }
+function msdlab_read_more_link() {
+    return '&hellip; <a class="more-link" href="' . get_permalink() . '">Read More</a>';
+}
 /*** FOOTER ***/
 
 /**
